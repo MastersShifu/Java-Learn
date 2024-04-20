@@ -10,12 +10,12 @@ public class VetClinic {
 
     public void newVisitor( Client client, Animal clientAnimal) {
         boolean end = false;
-        Scanner myObj = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         String visitInfo;
 
         while (!end) {
             System.out.println("Why you want visit clinic? \n1. Disease\n2.Inspection\n3.Vaccination");
-            visitInfo = myObj.nextLine();
+            visitInfo = scanner.nextLine();
 
             switch (visitInfo.toLowerCase()) {
                 case "1":

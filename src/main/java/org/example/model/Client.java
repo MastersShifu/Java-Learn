@@ -1,25 +1,14 @@
 package org.example.model;
 
-import java.util.Scanner;
-
 public class Client {
     private final Animal clientAnimal;
     private final String clientName;
     private final Integer clientAge;
 
-    public Client(Animal animal) {
-        Scanner myObj = new Scanner(System.in);
+    public Client(Animal animal, String clientName, Integer clientAge) {
         this.clientAnimal = animal;
-
-        System.out.print("Client name: ");
-        this.clientName = myObj.nextLine();
-
-        System.out.println("Age: ");
-        while (!myObj.hasNextInt()) {
-            System.out.println("That's not a number!");
-            myObj.next(); // this is important!
-        }
-        this.clientAge = myObj.nextInt();
+        this.clientName = clientName;
+        this.clientAge = clientAge;
     }
 
     public Animal getClientAnimal() {
@@ -30,4 +19,7 @@ public class Client {
         return clientName;
     }
 
+    public Integer getClientAge() {
+        return clientAge;
+    }
 }

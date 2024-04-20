@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.controller.WriteFields;
 import org.example.model.*;
 import java.util.Scanner;
 
@@ -16,11 +17,13 @@ public class Main {
             switch (choose) {
                 case "1" -> {
                     System.out.println("Write animal info: ");
-                    Animal animal = new Animal();
+
+                    Animal animal = WriteFields.NewAnimal();
 
                     System.out.println("Now Client data: ");
-                    Client client = new Client(animal);
-                    clinic.newVisitor(client, client.getClientAnimal());
+                    Client client = WriteFields.NewClient(animal);
+
+                    clinic.newVisitor(client, animal);
                 }
 
                 case "2" -> {
