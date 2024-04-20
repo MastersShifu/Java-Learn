@@ -3,10 +3,10 @@ package org.example.model;
 import java.util.Scanner;
 
 public abstract class Animals {
-    final private String animalKind;
-    final private String animalName;
-    final private Float animalAge;
-    final private String animalCharacter;
+    private final String animalKind;
+    private final String animalName;
+    private final Float animalAge;
+    private final String animalCharacter;
 
     public Animals() {
         Scanner myObj = new Scanner(System.in);
