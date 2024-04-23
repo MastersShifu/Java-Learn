@@ -18,10 +18,10 @@ public class Main {
                 case "1" -> {
                     System.out.println("Write animal info: ");
 
-                    Animal animal = WriteFields.NewAnimal();
+                    Animal animal = WriteFields.newAnimal();
 
                     System.out.println("Now Client data: ");
-                    Client client = WriteFields.NewClient(animal);
+                    Client client = WriteFields.newClient(animal);
 
                     clinic.newVisitor(client, animal);
                 }

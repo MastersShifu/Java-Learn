@@ -14,19 +14,19 @@ public abstract class Animals {
     }
 
     public String getAnimalKind() {
-        return animalKind;
+        return this.animalKind;
     }
 
     public String getAnimalName() {
-        return animalName;
+        return this.animalName;
     }
 
     public Float getAnimalAge() {
-        return animalAge;
+        return this.animalAge;
     }
 
     public String getAnimalCharacter() {
-        return animalCharacter;
+        return this.animalCharacter;
     }
 }
 

@@ -12,14 +12,14 @@ public class Client {
     }
 
     public Animal getClientAnimal() {
-        return clientAnimal;
+        return this.clientAnimal;
     }
 
     public String getClientName() {
-        return clientName;
+        return this.clientName;
     }
 
     public Integer getClientAge() {
-        return clientAge;
+        return this.clientAge;
     }
 }

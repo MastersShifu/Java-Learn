@@ -6,7 +6,7 @@ import org.example.model.Client;
 import java.util.Scanner;
 
 public class WriteFields {
-    public static Animal NewAnimal() {
+    public static Animal newAnimal() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Animal kind: ");
         String animalKind = scanner.nextLine();
@@ -27,7 +27,7 @@ public class WriteFields {
         return new Animal(animalKind, animalName, animalAge, animalCharacter);
     }
 
-    public static Client NewClient(Animal animal) {
+    public static Client newClient(Animal animal) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Client name: ");

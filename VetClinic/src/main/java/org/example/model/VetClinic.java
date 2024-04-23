@@ -18,35 +18,36 @@ public class VetClinic {
             visitInfo = scanner.nextLine();
 
             switch (visitInfo.toLowerCase()) {
-                case "1":
+                case "1" -> {
                     System.out.println("DiseaseVisit");
                     Visit diseaseVisit = new DiseaseVisit();
                     diseaseVisit.createVisit(client, clientAnimal, "Disease visit");
                     visits.add(diseaseVisit.getVisitInfo());
                     end = true;
-                    break;
-                case "2":
+                }
+
+                case "2"-> {
                     System.out.println("InspectionVisit");
                     Visit inspectionVisit = new InspectionVisit();
                     inspectionVisit.createVisit(client, clientAnimal, "Inspection visit");
                     visits.add(inspectionVisit.getVisitInfo());
                     end = true;
-                    break;
-                case "3":
+                }
+                case "3" -> {
                     System.out.println("VaccinationVisit");
                     Visit vaccinationVisit = new VaccinationVisit();
                     vaccinationVisit.createVisit(client, clientAnimal, "Vaccination visit");
                     visits.add(vaccinationVisit.getVisitInfo());
                     end = true;
-                    break;
-                default:
+                }
+                default -> {
                     System.out.println("Invalid visit info");
-                    break;
+                }
             }
         }
     }
 
     public List<String> getVisits() {
-        return visits;
+        return this.visits;
     }
 }

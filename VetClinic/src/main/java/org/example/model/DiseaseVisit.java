@@ -2,7 +2,7 @@ package org.example.model;
 
 import java.util.Date;
 
-class VaccinationVisit implements Visit {
+class DiseaseVisit implements Visit {
     private Client client;
     private Animal clientAnimal;
     private String visitInfo;
@@ -15,6 +15,6 @@ class VaccinationVisit implements Visit {
     }
 
     public String getVisitInfo() {
-        return "Client: " + client.getClientName() + " Animal: " + clientAnimal.getAnimalKind() + " Animal name:" + clientAnimal.getAnimalName() + " Visit info: " + visitInfo + " Date: " + nextVisitDate;
+        return "Client: " + this.client.getClientName() + " Animal: " + this.clientAnimal.getAnimalKind() + " Animal name:" + this.clientAnimal.getAnimalName() + " Visit info: " + this.visitInfo + " Date: " + this.nextVisitDate;
     }
 }
