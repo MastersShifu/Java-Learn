@@ -1,15 +1,8 @@
 package org.example.ArrayModuls;
 
-public abstract class AbstractArrayLike<E> {
-
-    protected AbstractArrayLike() {
-    }
-
-    public abstract Object get(int index);
-
-    public abstract void set(int index, E e);
-
-    public abstract void remove(int index);
-
-    public abstract void add(int index, Object o);
+interface ArrayLikeInterface<E> {
+    Object get(int index);
+    void set(int index, Object object);
+    void remove(int index);
+    void add(int index, Object object);
 }

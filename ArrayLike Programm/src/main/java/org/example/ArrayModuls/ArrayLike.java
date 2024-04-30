@@ -1,49 +1,47 @@
 package org.example.ArrayModuls;
 
-public class ArrayLike<E> extends AbstractArrayLike<E> {
+public class ArrayLike<E> implements ArrayLikeInterface<E> {
     private Object[] array;
+    private static final Integer INIT_ARRAY_CAPACITY = 10;
 
     public ArrayLike() {
-        this.array = new Object[10];
+        this.array = new Object[INIT_ARRAY_CAPACITY];
     }
 
-    @Override
     public Object get(int index) {
-        return array[index];
+        return this.array[index];
     }
 
-    @Override
-    public void set(int index, Object o) {
-        array[index] = o;
+    public void set(int index, Object object) {
+        this.array[index] = object;
     }
 
-    @Override
     public void remove(int index) {
-        array[index] = null;
+        this.array[index] = null;
     }
 
-    @Override
-    public void add(int index, Object o) {
-        while (array.length < index) {
+    public void add(int index, Object object) {
+        while (this.array.length < index) {
             Object[] tempArray = array.clone();
-            array = new Object[(int) (tempArray.length * 1.5)];
-            System.arraycopy(tempArray, 0, array, 0, tempArray.length);
+            this.array = new Object[(int) (tempArray.length * 1.5)];
+            System.arraycopy(tempArray, 0, this.array, 0, tempArray.length);
         }
 
-        array[index] = o;
+        this.array[index] = object;
     }
 
     @Override
     public String toString() {
         StringBuilder arrayToString = new StringBuilder("[");
-        for (int i = 0; array.length > i; i++) {
-            if (array[i] != null) {
-                arrayToString.append(array[i]);
-                if (array[i + 1] != null) {
+        for (int i = 0; this.array.length > i; i++) {
+            if (this.array[i] != null) {
+                arrayToString.append(this.array[i]);
+                if (this.array[i + 1] != null) {
                     arrayToString.append(", ");
                 }
             }
         }
+
         arrayToString.append("]");
 
         return arrayToString.toString();
